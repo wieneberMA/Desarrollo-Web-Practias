@@ -6,34 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseñador Freelancer</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="styles">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
 
     <head>
-        <h1>Wieneber Macias</h1>
-    </head>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Clientes</a>
-        <a href="#">Contacto</a>
-    </nav>
+        <h1 class="titulo">Wieneber Macias 
+            <span>
+                Freelancer
+            </span>
+        </h1>
+    </head> 
+    <div class="nav-bg">    
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
 
 
-    <section>
-        <h2>Diseño y Desarrollo Web Freelancer </h2>
-        <p>Cuernavaca, Morelos</p>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
-            <path d="M9 4v13" />
-            <path d="M15 7v5.5" />
-            <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
-            <path d="M19 18v.01" />
-          </svg>
-        <a href="#">Contactar</a>
-    </section>
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2 class="">
+                Diseño y Desarrollo Web 
+                <span>
+                    Freelancer 
+                </span>
+            </h2>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+                    <path d="M9 4v13" />
+                    <path d="M15 7v5.5" />
+                    <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+                    <path d="M19 18v.01" />
+                </svg>
+                Cuernavaca, Morelos
+            </p>
+            <a class="boton" href="#">Contactar</a>
+        </div>
+        </section>
 
 
     <main>
