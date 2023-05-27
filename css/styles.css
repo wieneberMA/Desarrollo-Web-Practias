@@ -5,6 +5,8 @@
     --verde: #00A82D;
     --gris: #757575;
     --naranja: #E88E2E;
+    --grisclaro: #DFE9F3;
+    --azulclaro: #05A7FC;
 
 }
 
@@ -15,13 +17,26 @@ html {
 }
 *, *:before, *:after {
     box-sizing: inherit;
-  }
+  }/*hack box model*/
 
 body {
     /** 1rem = 10px **/
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    background-image: radial-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);/* permite un degradado en el cuerpo para no tener un color blanco chillante */
 }
+.sombra{
+    -webkit-box-shadow: 0px 5px 14px 1px rgba(166,163,166,1);
+    -moz-box-shadow: 0px 5px 14px 1px rgba(166,163,166,1);
+    box-shadow: 0px 5px 14px 1px rgba(166,163,166,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 2rem;
+}/*sombreado del contenido*/
+
+
+
+/*tipografias*/
 
 h1{
     font-size: 3.8rem;
@@ -40,6 +55,23 @@ h1,h2,h3{
     font-size: 2rem;
     color:var(--oscuro);
 }
+/*Utilidades*/
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-100{
+        width: auto;
+    }
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+.flex{
+    display: flex;
+
+}
+
 
 .contenedor {
     max-width: 120rem;
@@ -58,11 +90,15 @@ h1,h2,h3{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
 @media (min-width: 480px) {
     .boton{
         width: auto;
     }
+}
+.boton:hover{
+    cursor: pointer;
 }
 
 .nav-bg {
@@ -100,8 +136,8 @@ h1,h2,h3{
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
-
     position: relative;
+    margin-bottom: 2rem;
 
 }
 .contenido-hero{
@@ -121,4 +157,87 @@ h1,h2,h3{
 .contenido-hero h2,
 .contenido-hero p{
     color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        /* permite fraccionar el contenido mediante grid tomando en cuenta como 100% dividiendo entre el numero de contenidos*/
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--naranja);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--azulclaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Contato*/
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/* se utiliza para tomar el valor mas peque;o y escalarlo en la pagina el fondo del formulario*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--naranja);
+
+}
+
+@media (min-width: 768px) {
+    .contenedor-campo{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 1rem;
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea{
+    height: 20rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.enviar .boton{
+    width: 100%;
 }
